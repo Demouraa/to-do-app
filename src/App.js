@@ -2,10 +2,11 @@ import React, { Component, useState } from 'react';
 import './App.css';
 
 const Todo = ({ todo, index, completeTodo, removeTodo }) => 
-<div 
+<div
   style={{textDecoration: todo.isComplete ? 'line-through' : ''}} 
-  className="todo"> { todo.text }
-  <div>
+  className="todo"> 
+  <div>{ todo.text }</div>
+  <div className="buttons">
     <button onClick={() => completeTodo(index)}>Completo</button>
     <button onClick={() => removeTodo(index)}>X</button>
   </div>
